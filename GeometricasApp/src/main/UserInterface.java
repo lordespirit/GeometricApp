@@ -12,7 +12,6 @@ public class UserInterface {
 		
 	}
 	
-	
 	public static void showMenuInit(){
 		
 		System.out.print("Introduce la figura geométrica con la que deseas trabajar: ");
@@ -51,6 +50,34 @@ public class UserInterface {
 
 	}
 	
+	public static void showMenuElipse(){
+		
+		System.out.println("ELIPSE");
+		System.out.println("Debes introducir las medidas del 'Radio mayor' y del 'Radio menor'");
+
+	}
+	
+	public static void showMenuRectangulo(){
+		
+		System.out.println("RECTANGULO");
+		System.out.println("Debes introducir las medidas de 'alto' y 'ancho'");
+
+	}
+	
+	public static void showMenuHexagono(){
+		
+		System.out.println("HEXAGONO REGULAR");
+		System.out.println("Debes introducir la medida de uno de los lados");
+
+	}
+
+	public static void showMenuCirculo(){
+	
+	System.out.println("CIRCULO");
+	System.out.println("Debes introducir la medida del radio");
+
+	}
+	
 	public static void showMenuTrianguloIsosceles(){
 		
 		System.out.println("TRIANGULO ISOSCELES");
@@ -71,7 +98,42 @@ public class UserInterface {
 		trisosceles[1] = Input.scannFloat();
 		return trisosceles;
 	}
+	
+	public static float[] scanMenuRectangulo(){
+		
+		float[] rectangulo = new float[2];
+		System.out.println("Alto > ");
+		rectangulo[0] = Input.scannFloat();
+		System.out.println("Ancho > ");
+		rectangulo[1] = Input.scannFloat();
+		return rectangulo;
+	}
 
+	public static float[] scanMenuElipse(){
+	
+	float[] elipse = new float[2];
+	System.out.println("Radio Mayor > ");
+	elipse[0] = Input.scannFloat();
+	System.out.println("Radio Menor > ");
+	elipse[1] = Input.scannFloat();
+	return elipse;
+	}
+
+	public static float scanMenuHexagono(){
+	
+	float lado;
+	System.out.println("Lado > ");
+	lado = Input.scannFloat();
+	return lado;
+	}
+
+	public static float scanMenuCirculo(){
+	
+	float radio;
+	System.out.println("Radio > ");
+	radio = Input.scannFloat();
+	return radio;
+	}
 
 	public static void showAreaPerimetro(String option, float area, float perimetro) {
 		System.out.println("************ RESULTADO ************");
@@ -82,8 +144,7 @@ public class UserInterface {
 		System.out.println("***********************************\n");
 	}
 
-
-	public static void showAreaPerimetroTriangulo(String option, String optionTriangulo, float area, float perimetro) {
+	public static void showAreaPerimetro(String option, String optionTriangulo, float area, float perimetro) {
 		System.out.println("************ RESULTADO ************");
 		System.out.println("****** " + option + " " + optionTriangulo + " ******");
 		System.out.println("***********************************");

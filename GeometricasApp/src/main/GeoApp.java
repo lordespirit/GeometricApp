@@ -23,13 +23,13 @@ public class GeoApp {
 							UserInterface.showMenuTrianguloEquilatero();
 							float lado = UserInterface.scanMenuTrianguloEquilatero();
 							Triangulo triangulo = new Triangulo(lado);
-							UserInterface.showAreaPerimetroTriangulo(option,optionTriangulo,triangulo.getArea(),triangulo.getPerimetro());
+							UserInterface.showAreaPerimetro(option,optionTriangulo,triangulo.getArea(),triangulo.getPerimetro());
 							break;
 						case "isosceles":
 							UserInterface.showMenuTrianguloIsosceles();
 							float lados[] = UserInterface.scanMenuTrianguloIsosceles();
 							Triangulo trianguloIsos = new Triangulo(lados[0],lados[1]);
-							UserInterface.showAreaPerimetroTriangulo(option,optionTriangulo,trianguloIsos.getArea(),trianguloIsos.getPerimetro());
+							UserInterface.showAreaPerimetro(option,optionTriangulo,trianguloIsos.getArea(),trianguloIsos.getPerimetro());
 							break;
 						case "salir":
 							System.out.println("Volviendo al menú principal");
@@ -41,16 +41,28 @@ public class GeoApp {
 				}while(!optionTriangulo.equals("salir"));
 				break;
 			case "rectangulo":
-				
+				UserInterface.showMenuRectangulo();
+				float lado[] = UserInterface.scanMenuRectangulo();
+				Rectangulo rectangulo = new Rectangulo(lado[0],lado[1]);
+				UserInterface.showAreaPerimetro(option, rectangulo.getArea(), rectangulo.getPerimetro());
 				break;
 			case "elipse":
-				
+				UserInterface.showMenuElipse();
+				float radios[] = UserInterface.scanMenuElipse();
+				Elipse elipse = new Elipse(radios[0],radios[1]);
+				UserInterface.showAreaPerimetro(option, elipse.getArea(), elipse.getPerimetro());
 				break;
 			case "hexagono":
-				
+				UserInterface.showMenuHexagono();
+				float edge = UserInterface.scanMenuHexagono();
+				Hexagono hexagono = new Hexagono(edge);
+				UserInterface.showAreaPerimetro(option, hexagono.getArea(), hexagono.getPerimetro());
 				break;
 			case "circulo":
-				
+				UserInterface.showMenuCirculo();
+				float radio = UserInterface.scanMenuCirculo();
+				Circulo crc = new Circulo(radio);
+				UserInterface.showAreaPerimetro(option, crc.getArea(),crc.getPerimetro());
 			default:
 				System.out.println("Opción no válida. Vuelva a probar.");
 				break;
