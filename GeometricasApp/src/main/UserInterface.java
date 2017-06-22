@@ -14,7 +14,7 @@ public class UserInterface {
 	
 	public static void showMenuInit(){
 		
-		System.out.print("Introduce la figura geométrica con la que deseas trabajar: ");
+		System.out.println("Introduce la figura geométrica con la que deseas trabajar: ");
 		System.out.println("> Triangulo");
 		System.out.println("> Rectangulo");
 		System.out.println("> Elipse");
@@ -92,9 +92,9 @@ public class UserInterface {
 	public static float[] scanMenuTrianguloIsosceles(){
 		
 		float[] trisosceles = new float[2];
-		System.out.println("Base > ");
+		System.out.print("Base > ");
 		trisosceles[0] = Input.scannFloat();
-		System.out.println("Altura > ");
+		System.out.print("Altura > ");
 		trisosceles[1] = Input.scannFloat();
 		return trisosceles;
 	}
@@ -102,9 +102,9 @@ public class UserInterface {
 	public static float[] scanMenuRectangulo(){
 		
 		float[] rectangulo = new float[2];
-		System.out.println("Alto > ");
+		System.out.print("Alto > ");
 		rectangulo[0] = Input.scannFloat();
-		System.out.println("Ancho > ");
+		System.out.print("Ancho > ");
 		rectangulo[1] = Input.scannFloat();
 		return rectangulo;
 	}
@@ -112,9 +112,9 @@ public class UserInterface {
 	public static float[] scanMenuElipse(){
 	
 	float[] elipse = new float[2];
-	System.out.println("Radio Mayor > ");
+	System.out.print("Radio Mayor > ");
 	elipse[0] = Input.scannFloat();
-	System.out.println("Radio Menor > ");
+	System.out.print("Radio Menor > ");
 	elipse[1] = Input.scannFloat();
 	return elipse;
 	}
@@ -122,7 +122,7 @@ public class UserInterface {
 	public static float scanMenuHexagono(){
 	
 	float lado;
-	System.out.println("Lado > ");
+	System.out.print("Lado > ");
 	lado = Input.scannFloat();
 	return lado;
 	}
@@ -130,26 +130,26 @@ public class UserInterface {
 	public static float scanMenuCirculo(){
 	
 	float radio;
-	System.out.println("Radio > ");
+	System.out.print("Radio > ");
 	radio = Input.scannFloat();
 	return radio;
 	}
 
 	public static void showAreaPerimetro(String option, float area, float perimetro) {
 		System.out.println("************ RESULTADO ************");
-		System.out.println("******** " + option + " ********");
+		//System.out.println("******** " + option + " ********");
 		System.out.println("***********************************");
-		System.out.println("> Area : \t\t" + area);
-		System.out.println("> Perímetro : \t" + perimetro);
+		System.out.println(">      Area :  " + area);
+		System.out.println("> Perímetro :  " + perimetro);
 		System.out.println("***********************************\n");
 	}
 
 	public static void showAreaPerimetro(String option, String optionTriangulo, float area, float perimetro) {
 		System.out.println("************ RESULTADO ************");
-		System.out.println("****** " + option + " " + optionTriangulo + " ******");
+		//System.out.println("****** " + option + " " + optionTriangulo + " ******");
 		System.out.println("***********************************");
-		System.out.println("> Area : \t" + area);
-		System.out.println("> Perímetro : \t" + perimetro);
+		System.out.println(">      Area :  " + area);
+		System.out.println("> Perímetro :  " + perimetro);
 		System.out.println("***********************************\n");
 	}
 	
