@@ -135,22 +135,15 @@ public class UserInterface {
 	return radio;
 	}
 
-	public static void showAreaPerimetro(String option, float area, float perimetro) {
+	public static void showAreaPerimetro(float area, float perimetro) {
+		
 		System.out.println("************ RESULTADO ************");
-		//System.out.println("******** " + option + " ********");
 		System.out.println("***********************************");
 		System.out.println(">      Area :  " + area);
 		System.out.println("> Perímetro :  " + perimetro);
 		System.out.println("***********************************\n");
-	}
-
-	public static void showAreaPerimetro(String option, String optionTriangulo, float area, float perimetro) {
-		System.out.println("************ RESULTADO ************");
-		//System.out.println("****** " + option + " " + optionTriangulo + " ******");
-		System.out.println("***********************************");
-		System.out.println(">      Area :  " + area);
-		System.out.println("> Perímetro :  " + perimetro);
-		System.out.println("***********************************\n");
+		
 	}
 	
 }
+
